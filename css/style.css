@@ -1,0 +1,129 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.purple, .purple:visited{
+    color: purple;
+    cursor: pointer;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #f3f3f3;
+}
+
+.container{
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links{
+    display: flex;
+    height: 75px;
+    width: 70%;
+    justify-content: space-between;
+}
+.link-wrapper{
+    display: inline-block;
+    position: relative;
+    margin: 0px 12px;
+    transition: .5s;
+}
+
+.link-wrapper:hover{
+    z-index: 9999;
+    transform: rotate(-6deg) scale(1.35);
+}
+
+.imageLink{
+    width: 12vw;
+    height: 6vh;
+    display: block;
+}
+
+
+.link-wrapper:nth-child(even):hover{
+    transform: rotate(6deg) scale(1.35);
+    z-index: 9999;
+}
+.link-wrapper:nth-child(even):hover .shape-wrapper{
+    display: block;
+}
+
+
+.shape-wrapper{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.link-wrapper:hover .shape-wrapper{
+    display: block;
+}
+
+.svg{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.shape-red{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .1s linear;
+    animation-duration: .45s;
+    animation-delay: 0.08s;
+    animation-duration: .45s;
+    animation-delay: 0.08s;
+    opacity: .8;
+    overflow: hidden;
+    -webkit-animation-name: jelly;
+    animation-name: jelly;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.shape-cyan {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .1s linear;
+    animation-duration: .45s;
+    animation-delay: 0.08s;
+    mix-blend-mode: screen;
+    animation-delay: 0.05s;
+    animation-duration: .4s;
+    overflow: hidden;
+    -webkit-animation-name: jelly;
+    animation-name: jelly;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@keyframes jelly {
+    0% {
+      width: 100%; transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);
+    }
+    50% { width: 100%; transform: scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px); }
+    100% { width: 100%; transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); }
+  }

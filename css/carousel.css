@@ -1,0 +1,105 @@
+#carousel-img{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#carousel button{
+    min-width: 90px;
+    min-height: 30px;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid;
+    margin: auto;
+}
+
+#carousel-img .about-project{
+    min-height: 50px;
+}
+
+#carousel-img .about-project {
+    display: none;
+}
+
+#carousel-img:hover .about-project{
+    display: flex;
+    word-wrap: break-word;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 100vw;
+}
+
+#carousel-img:hover{
+    transform: scale(1.2, 1.2);
+}
+
+#carousel-img img{
+    width: 50vw;
+    height: 50vh;
+    transition: .5s;
+}
+
+@keyframes next{
+    from{
+        transfrom: translateX(0px);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(5px);
+        opacity: .5;
+    }
+}
+
+.project{
+    width: 220px;
+    height: 220px; 
+    margin: 10px;
+    cursor: pointer;
+    padding: 5px;
+    box-shadow: 3px 3px 15px black; 
+    transition: 1.5s;
+}
+
+.project-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    max-width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.project .about{
+    display: none;
+}
+
+.project:hover{
+    margin-left:40px;
+    transform: scale(1.5,1.5);
+}
+.project-wrapper:hover .project:not(:hover){
+    transform: scale(.5, .5);
+}
+
+.project:hover .about{
+    display: block;
+}
+
+.img-project{
+    display: flex;
+    width: 350px;
+    height: 300px;
+    flex-direction: flex-end;
+    border: 1px solid red;
+}
+
+.img-project img{
+    width: 550px;
+    height: 100%;
+    object-fit: cover;
+}

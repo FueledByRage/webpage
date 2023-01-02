@@ -1,0 +1,97 @@
+div#skills{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transform: skewY(-10deg);
+}
+.isometric-card{
+    position: relative;
+    width: 22vw;
+    height: 400px;
+    background-color: #fff;
+    transition: .5s;
+    transition: .5s;
+}
+
+.isometric-card:hover{
+    transform: translateY(-40px);
+}
+.isometric-card:before{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 22vw;
+    height: 15px;
+    background-color: #00c0f6;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: .5s;
+}
+.isometric-card:after{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 15px;
+    height: 50%;
+    background-color: #00c0f6;
+    transform-origin: left;
+    transform: skewY(45deg);
+    transition: .5s;
+    border-bottom: 200px solid #d9d9d9;
+}
+
+.content-padding{
+    padding: 20px;
+}
+
+.img-box{
+    width: 22vw;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #00c7ff;
+}
+
+.img-box img{
+    max-width: 100px;
+}
+.img-box h3{
+
+    color: #fff;
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    color: #777;
+    overflow: hidden;
+    text-align: center;
+}
+
+.content::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(transparent,transparent,rgba(0,0,0,.1));
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: .5s;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.isometric-card:hover .content::before{
+    transform: translateY(40px) skewX(45deg);
+    filter: blur(5px);
+    opacity: .5;
+}
+
