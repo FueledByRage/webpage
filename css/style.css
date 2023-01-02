@@ -3,6 +3,7 @@ html {
 }
 
 .purple, .purple:visited{
+    text-decoration: none;
     color: purple;
     cursor: pointer;
 }
@@ -18,7 +19,7 @@ body{
 .container{
     max-width: 100vw;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +44,7 @@ body{
 
 .imageLink{
     width: 12vw;
+    min-width: 50px;
     height: 6vh;
     display: block;
 }
@@ -127,3 +129,11 @@ body{
     50% { width: 100%; transform: scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px); }
     100% { width: 100%; transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); }
   }
+
+  @media (max-width: 720px) {
+    #navigation-options{
+        height: 120px;
+        border-bottom: 1px solid silver;
+        min-height: auto;
+    }
+}

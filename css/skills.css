@@ -8,6 +8,7 @@ div#skills{
 .isometric-card{
     position: relative;
     width: 22vw;
+    min-width: 200px;
     height: 400px;
     background-color: #fff;
     transition: .5s;
@@ -23,6 +24,8 @@ div#skills{
     top: -15px;
     left: 0;
     width: 22vw;
+    min-width: 200px;
+
     height: 15px;
     background-color: #00c0f6;
     transform-origin: bottom;
@@ -51,6 +54,7 @@ div#skills{
     width: 22vw;
     height: 200px;
     display: flex;
+    min-width: 200px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -95,3 +99,9 @@ div#skills{
     opacity: .5;
 }
 
+
+@media (max-width: 720px) {
+    .isometric-card{
+        margin-top: 35px;
+    }
+}
