@@ -1,3 +1,7 @@
+#carousel{
+    flex-direction: column;
+}
+
 #carousel-img{
     display: flex;
     flex-direction: column-reverse;
@@ -30,6 +34,7 @@
     word-wrap: break-word;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 80%;
     max-width: 100vw;
 }
@@ -41,18 +46,16 @@
 #carousel-img img{
     width: 50vw;
     height: 50vh;
+    min-height: 300px;
+    min-width: 600px;
     transition: .5s;
 }
 
-@keyframes next{
-    from{
-        transfrom: translateX(0px);
-        opacity: 1;
-    }
-    to{
-        transform: translateX(5px);
-        opacity: .5;
-    }
+.buttons{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 25px;
 }
 
 .project{
@@ -102,4 +105,21 @@
     width: 550px;
     height: 100%;
     object-fit: cover;
+}
+
+@media (max-width: 720px) {
+    #carousel-img img{
+        width: 80%;
+        height: 60%;
+        min-width: auto;
+    }
+    #carousel-img .about-project{
+        display: flex;
+        word-wrap: break-word;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 80%;
+        max-width: 100vw;
+    }
 }
