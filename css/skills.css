@@ -27,7 +27,7 @@ div#skills{
     min-width: 200px;
 
     height: 15px;
-    background-color: #00c0f6;
+    background-color: rgb(255,1,46);
     transform-origin: bottom;
     transform: skewX(45deg);
     transition: .5s;
@@ -39,7 +39,7 @@ div#skills{
     left: -15px;
     width: 15px;
     height: 50%;
-    background-color: #00c0f6;
+    background-color: rgb(255,1,46);
     transform-origin: left;
     transform: skewY(45deg);
     transition: .5s;
@@ -58,14 +58,13 @@ div#skills{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #00c7ff;
+    background: rgb(255,1,46);
 }
 
 .img-box img{
     max-width: 100px;
 }
 .img-box h3{
-
     color: #fff;
 }
 
@@ -85,7 +84,7 @@ div#skills{
     bottom: 0;
     width: 100%;
     height: 400px;
-    background: linear-gradient(transparent,transparent,rgba(0,0,0,.1));
+    background: linear-gradient(transparent,transparent,rgba(233, 9, 9,1));
     transform-origin: bottom;
     transform: skewX(45deg);
     transition: .5s;

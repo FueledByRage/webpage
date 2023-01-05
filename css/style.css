@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    color: white;
 }
 
 .purple, .purple:visited{
@@ -13,7 +14,7 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: #f3f3f3;
+    background: #1d1d1d;
 }
 
 .container{
@@ -24,6 +25,11 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+#navigation-options{
+    background: whitesmoke;
+}
+
 .links{
     display: flex;
     height: 75px;
