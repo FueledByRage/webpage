@@ -23,5 +23,12 @@ export const carouselData = [
         about: 'Organizador de currículos que eu fiz para um desafio utilizando Laravel Lumen. Achei a ferramenta extremamente util, como já possuia conhecimento em vários conceitos web que o framework utiliza foi um aprendizado tranquilo.',
         githubUrl: 'https://github.com/FueledByRage/Codificar-Organizador-De-Curriculos'
     },
+    {
+        title: '',
+        previewUrl: './assets/images/email-sender.png',
+        about: 'Microserviço para envio de emails usando Java e Spring Boot',
+        githubUrl: 'https://github.com/FueledByRage/microservice-email'
+
+    },
     
 ];
