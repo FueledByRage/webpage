@@ -1,9 +1,19 @@
 #social-media{
-    justify-content: space-evenly;
+    flex-direction: column;
+    color: orange;    
 }
 
 #social-media img{
     width: 100px;
     height: 100px;
     
+}
+
+#social-media .media-links{
+    display: flex;
+    max-width: 100vw;
+    height: 70vh;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
 }
