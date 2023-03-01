@@ -111,33 +111,38 @@
         </div>
     </div>
     <div id="about" class="container">
-        <div class="container">
-            <div class="card">
-                <div class="cardname">
-                    Erik
-                </div>
-                <div class="stars">
+        <!--
+            <div class="container">
+                <div class="card">
+                    <div class="cardname">
+                        Erik
+                    </div>
+                    <div class="stars">
+                        <div class="star-wrapper">
+                            <div class="star"></div>
+                        </div>
                     <div class="star-wrapper">
                         <div class="star"></div>
                     </div>
-                <div class="star-wrapper">
-                    <div class="star"></div>
-                </div>
-                </div>
-                <div class="card-img">
-                    <img  src="./assets/images/about-img.jpg" alt="">
-                </div>
-                <div class="card-description">
-                    <div class="desc">
-                        <small> [ Full stack developer ]</small> <br>
-                        <small>Java and Typescript</small>
                     </div>
-                    <div class="stats">
-                        <small class="atk">ATK/300</small>
-                        <small class="def">DEF/200</small>
+                    <div class="card-img">
+                        <img  src="./assets/images/about-img.jpg" alt="">
+                    </div>
+                    <div class="card-description">
+                        <div class="desc">
+                            <small> [ Full stack developer ]</small> <br>
+                            <small>Java and Typescript</small>
+                        </div>
+                        <div class="stats">
+                            <small class="atk">ATK/300</small>
+                            <small class="def">DEF/200</small>
+                        </div>
                     </div>
                 </div>
             </div>
+        -->
+        <div class="img-container">
+            <img id="imgAbout" src="./assets/images/about-img.jpg" alt="" class="imgAbout">
         </div>
         <div id="about-me" class="about-me">
             <span id="aboutText" class="aboutText" >
@@ -215,10 +220,6 @@
         renderProjects.set();
         const projectsIds = carouselData.map((element, index) => `animated-${index}`);
         document.addEventListener("scroll", animateElements([ 'imgAbout', 'aboutText', ...projectsIds ]));
-        const card = document.querySelector('.card');
-        card.addEventListener('click', ()=>{
-            card.style.animation = 'stopRotation 1.8s linear'
-        });
     </script>
 </body>
 </html>
