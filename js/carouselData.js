@@ -1,4 +1,4 @@
-export const carouselData = [
+const carouselData = [
     {
         title: '',
         previewUrl: './assets/images/waystoneInn.png',
@@ -32,3 +32,5 @@ export const carouselData = [
     },
     
 ];
+
+export default carouselData;

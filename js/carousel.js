@@ -1,4 +1,4 @@
-import { carouselData } from "./carouselData.js";
+import carouselData  from "./carouselData.js";
 
 const Carousel = ()=>{
     var _pointer = 0;
@@ -18,9 +18,6 @@ const Carousel = ()=>{
 
         textAbout.textContent = carouselData[_pointer].about;
         image.src = carouselData[_pointer].previewUrl;
-        /*setTimeout(()=>{
-            setTimeout( _goNext(), 1000)
-        }, 200);*/
     }
 
     function _goPrevious(){

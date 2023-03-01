@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/animatedContainer.css">
     <title>Erik Natan - Web Developer</title>
 </head>
 <body>
@@ -60,7 +61,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#carousel" class="link-wrapper">
+            <a href="#animatedContainerWrapper" class="link-wrapper">
                 <div class="image-wrapper">
                     <img class="imageLink" src="./assets/images/portfolio.png"/>
                 </div>
@@ -110,9 +111,27 @@
         </div>
     </div>
     <div id="about" class="container">
-        <div id="img-container" class="img-container">
-            <img id="imgAbout" class="imgAbout" src="./assets/images/about-img.jpg" alt="">
-        </div>        
+        <div class="container">
+            <div class="card">
+                <div class="cardname">
+                    Erik
+                </div>
+                <div class="stars">
+                    <div class="star-wrapper">
+                        <div class="star"></div>
+                    </div>
+                <div class="star-wrapper">
+                    <div class="star"></div>
+                </div>
+                </div>
+                <div class="card-img">
+                    <img  src="./assets/images/about-img.jpg" alt="">
+                </div>
+                <div class="card-description">
+                    <small>Full stack developer</small>
+                </div>
+            </div>
+        </div>
         <div id="about-me" class="about-me">
             <span id="aboutText" class="aboutText" >
                 I'm a web developer located in Brazil and graduated in System analysis and development. 
@@ -167,17 +186,7 @@
             </div>
         </div>
     </div>
-    <div id="carousel" class="container">
-        <div id="carousel-img">
-            <div class="about-project">
-                <span class="about-project-text">
-                </span>
-            </div>
-        </div>
-        <div class="buttons">
-            <button id="previous">Previous</button>
-            <button id="next">Next</button>
-        </div>
+    <div id="animatedContainerWrapper">
     </div>
     <div id="social-media" class="container" >
         <h1>You can find me here</h1>
@@ -189,13 +198,16 @@
                 <img src="./assets/images/linkedin.png" alt="">
             </a>
         </div>
-    </div>
+    </div> 
     <script type="module">
         import animateElements from './js/animationHandler.js';
-        import Carousel from './js/carousel.js';
-        document.addEventListener("scroll", animateElements([ 'imgAbout', 'aboutText' ]));
-        const carousel = Carousel();
-        carousel.render().setEvents();
+        import carouselData from './js/carouselData.js';
+        import setProjects from './js/setProjects.js';
+
+        const renderProjects = setProjects(carouselData);
+        renderProjects.set();
+        const projectsIds = carouselData.map((element, index) => `animated-${index}`);
+        document.addEventListener("scroll", animateElements([ 'imgAbout', 'aboutText', ...projectsIds ]));
     </script>
 </body>
 </html>
