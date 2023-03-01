@@ -128,7 +128,14 @@
                     <img  src="./assets/images/about-img.jpg" alt="">
                 </div>
                 <div class="card-description">
-                    <small>Full stack developer</small>
+                    <div class="desc">
+                        <small> [ Full stack developer ]</small> <br>
+                        <small>Java and Typescript</small>
+                    </div>
+                    <div class="stats">
+                        <small class="atk">ATK/300</small>
+                        <small class="def">DEF/200</small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,11 +210,15 @@
         import animateElements from './js/animationHandler.js';
         import carouselData from './js/carouselData.js';
         import setProjects from './js/setProjects.js';
-
+        let cardStopped = false;
         const renderProjects = setProjects(carouselData);
         renderProjects.set();
         const projectsIds = carouselData.map((element, index) => `animated-${index}`);
         document.addEventListener("scroll", animateElements([ 'imgAbout', 'aboutText', ...projectsIds ]));
+        const card = document.querySelector('.card');
+        card.addEventListener('click', ()=>{
+            card.style.animation = 'stopRotation 1.8s linear'
+        });
     </script>
 </body>
 </html>

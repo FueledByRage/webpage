@@ -150,21 +150,24 @@ body{
 .card{
     display: flex;
     flex-direction: column;
-    border: 3px solid grey;
-    width: 16vw;
+    border: 3px solid rgb(75, 69, 81);
+    min-width: 190px;
     align-items: center;
     padding-top: 5px;
+    background: rgb(208, 146, 97);
     height: 48vh;
-    animation: rotateAnimation 1.5s linear infinite;
+    animation: rotateAnimation 1.8s linear infinite;
+    cursor: pointer;
 }
 
 .card .cardname{
     display: flex;
     flex-direction: row;
-    border: 1.5px solid grey;
     border-radius: 5px;
     width: 90%;
-    padding: 2px;
+    font-size: 12px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .card .stars{
@@ -172,7 +175,6 @@ body{
     width: 90%;
     padding: 3px 0px;
     flex-direction: row;
-    border: 1px solid orange;
     justify-content: end;
 }
 
@@ -237,10 +239,30 @@ body{
 }
 
 .card .card-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-top: 5px;
-    border: 3px solid red;
-    width: 90%;
+    border: 3px solid rgb(166, 70, 45);
+    width: 85%;
     height: 18%;
+    font-size: 11px;
+    font-size: 10px;
+    padding: 5px;
+}
+
+
+.card .card-description .stats{
+    align-self: flex-end;
+    width: 99%;
+    border-top: 1px solid black;
+    font-size: 9px;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2px;
+}
+.stats .atk{
+    margin-right: 5px;
 }
 
 @keyframes rotateAnimation {
@@ -249,5 +271,11 @@ body{
     }
     to {
       transform: rotateY(225deg);
+    }
+  }
+
+  @keyframes stopRotation {
+    to{
+        transform: rotateY(0deg);
     }
   }
